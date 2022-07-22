@@ -1,237 +1,1050 @@
 // 指令 npm run build -> node ./dist/practice.js
-// # Simple Exercise I
+let thousandDigits = [
+    7,
+    3,
+    1,
+    6,
+    7,
+    1,
+    7,
+    6,
+    5,
+    3,
+    1,
+    3,
+    3,
+    0,
+    6,
+    2,
+    4,
+    9,
+    1,
+    9,
+    2,
+    2,
+    5,
+    1,
+    1,
+    9,
+    6,
+    7,
+    4,
+    4,
+    2,
+    6,
+    5,
+    7,
+    4,
+    7,
+    4,
+    2,
+    3,
+    5,
+    5,
+    3,
+    4,
+    9,
+    1,
+    9,
+    4,
+    9,
+    3,
+    4,
+    9,
+    6,
+    9,
+    8,
+    3,
+    5,
+    2,
+    0,
+    3,
+    1,
+    2,
+    7,
+    7,
+    4,
+    5,
+    0,
+    6,
+    3,
+    2,
+    6,
+    2,
+    3,
+    9,
+    5,
+    7,
+    8,
+    3,
+    1,
+    8,
+    0,
+    1,
+    6,
+    9,
+    8,
+    4,
+    8,
+    0,
+    1,
+    8,
+    6,
+    9,
+    4,
+    7,
+    8,
+    8,
+    5,
+    1,
+    8,
+    4,
+    3,
+    8,
+    5,
+    8,
+    6,
+    1,
+    5,
+    6,
+    0,
+    7,
+    8,
+    9,
+    1,
+    1,
+    2,
+    9,
+    4,
+    9,
+    4,
+    9,
+    5,
+    4,
+    5,
+    9,
+    5,
+    0,
+    1,
+    7,
+    3,
+    7,
+    9,
+    5,
+    8,
+    3,
+    3,
+    1,
+    9,
+    5,
+    2,
+    8,
+    5,
+    3,
+    2,
+    0,
+    8,
+    8,
+    0,
+    5,
+    5,
+    1,
+    1,
+    1,
+    2,
+    5,
+    4,
+    0,
+    6,
+    9,
+    8,
+    7,
+    4,
+    7,
+    1,
+    5,
+    8,
+    5,
+    2,
+    3,
+    8,
+    6,
+    3,
+    0,
+    5,
+    0,
+    7,
+    1,
+    5,
+    6,
+    9,
+    3,
+    2,
+    9,
+    0,
+    9,
+    6,
+    3,
+    2,
+    9,
+    5,
+    2,
+    2,
+    7,
+    4,
+    4,
+    3,
+    0,
+    4,
+    3,
+    5,
+    5,
+    7,
+    6,
+    6,
+    8,
+    9,
+    6,
+    6,
+    4,
+    8,
+    9,
+    5,
+    0,
+    4,
+    4,
+    5,
+    2,
+    4,
+    4,
+    5,
+    2,
+    3,
+    1,
+    6,
+    1,
+    7,
+    3,
+    1,
+    8,
+    5,
+    6,
+    4,
+    0,
+    3,
+    0,
+    9,
+    8,
+    7,
+    1,
+    1,
+    1,
+    2,
+    1,
+    7,
+    2,
+    2,
+    3,
+    8,
+    3,
+    1,
+    1,
+    3,
+    6,
+    2,
+    2,
+    2,
+    9,
+    8,
+    9,
+    3,
+    4,
+    2,
+    3,
+    3,
+    8,
+    0,
+    3,
+    0,
+    8,
+    1,
+    3,
+    5,
+    3,
+    3,
+    6,
+    2,
+    7,
+    6,
+    6,
+    1,
+    4,
+    2,
+    8,
+    2,
+    8,
+    0,
+    6,
+    4,
+    4,
+    4,
+    4,
+    8,
+    6,
+    6,
+    4,
+    5,
+    2,
+    3,
+    8,
+    7,
+    4,
+    9,
+    3,
+    0,
+    3,
+    5,
+    8,
+    9,
+    0,
+    7,
+    2,
+    9,
+    6,
+    2,
+    9,
+    0,
+    4,
+    9,
+    1,
+    5,
+    6,
+    0,
+    4,
+    4,
+    0,
+    7,
+    7,
+    2,
+    3,
+    9,
+    0,
+    7,
+    1,
+    3,
+    8,
+    1,
+    0,
+    5,
+    1,
+    5,
+    8,
+    5,
+    9,
+    3,
+    0,
+    7,
+    9,
+    6,
+    0,
+    8,
+    6,
+    6,
+    7,
+    0,
+    1,
+    7,
+    2,
+    4,
+    2,
+    7,
+    1,
+    2,
+    1,
+    8,
+    8,
+    3,
+    9,
+    9,
+    8,
+    7,
+    9,
+    7,
+    9,
+    0,
+    8,
+    7,
+    9,
+    2,
+    2,
+    7,
+    4,
+    9,
+    2,
+    1,
+    9,
+    0,
+    1,
+    6,
+    9,
+    9,
+    7,
+    2,
+    0,
+    8,
+    8,
+    8,
+    0,
+    9,
+    3,
+    7,
+    7,
+    6,
+    6,
+    5,
+    7,
+    2,
+    7,
+    3,
+    3,
+    3,
+    0,
+    0,
+    1,
+    0,
+    5,
+    3,
+    3,
+    6,
+    7,
+    8,
+    8,
+    1,
+    2,
+    2,
+    0,
+    2,
+    3,
+    5,
+    4,
+    2,
+    1,
+    8,
+    0,
+    9,
+    7,
+    5,
+    1,
+    2,
+    5,
+    4,
+    5,
+    4,
+    0,
+    5,
+    9,
+    4,
+    7,
+    5,
+    2,
+    2,
+    4,
+    3,
+    5,
+    2,
+    5,
+    8,
+    4,
+    9,
+    0,
+    7,
+    7,
+    1,
+    1,
+    6,
+    7,
+    0,
+    5,
+    5,
+    6,
+    0,
+    1,
+    3,
+    6,
+    0,
+    4,
+    8,
+    3,
+    9,
+    5,
+    8,
+    6,
+    4,
+    4,
+    6,
+    7,
+    0,
+    6,
+    3,
+    2,
+    4,
+    4,
+    1,
+    5,
+    7,
+    2,
+    2,
+    1,
+    5,
+    5,
+    3,
+    9,
+    7,
+    5,
+    3,
+    6,
+    9,
+    7,
+    8,
+    1,
+    7,
+    9,
+    7,
+    7,
+    8,
+    4,
+    6,
+    1,
+    7,
+    4,
+    0,
+    6,
+    4,
+    9,
+    5,
+    5,
+    1,
+    4,
+    9,
+    2,
+    9,
+    0,
+    8,
+    6,
+    2,
+    5,
+    6,
+    9,
+    3,
+    2,
+    1,
+    9,
+    7,
+    8,
+    4,
+    6,
+    8,
+    6,
+    2,
+    2,
+    4,
+    8,
+    2,
+    8,
+    3,
+    9,
+    7,
+    2,
+    2,
+    4,
+    1,
+    3,
+    7,
+    5,
+    6,
+    5,
+    7,
+    0,
+    5,
+    6,
+    0,
+    5,
+    7,
+    4,
+    9,
+    0,
+    2,
+    6,
+    1,
+    4,
+    0,
+    7,
+    9,
+    7,
+    2,
+    9,
+    6,
+    8,
+    6,
+    5,
+    2,
+    4,
+    1,
+    4,
+    5,
+    3,
+    5,
+    1,
+    0,
+    0,
+    4,
+    7,
+    4,
+    8,
+    2,
+    1,
+    6,
+    6,
+    3,
+    7,
+    0,
+    4,
+    8,
+    4,
+    4,
+    0,
+    3,
+    1,
+    9,
+    9,
+    8,
+    9,
+    0,
+    0,
+    0,
+    8,
+    8,
+    9,
+    5,
+    2,
+    4,
+    3,
+    4,
+    5,
+    0,
+    6,
+    5,
+    8,
+    5,
+    4,
+    1,
+    2,
+    2,
+    7,
+    5,
+    8,
+    8,
+    6,
+    6,
+    6,
+    8,
+    8,
+    1,
+    1,
+    6,
+    4,
+    2,
+    7,
+    1,
+    7,
+    1,
+    4,
+    7,
+    9,
+    9,
+    2,
+    4,
+    4,
+    4,
+    2,
+    9,
+    2,
+    8,
+    2,
+    3,
+    0,
+    8,
+    6,
+    3,
+    4,
+    6,
+    5,
+    6,
+    7,
+    4,
+    8,
+    1,
+    3,
+    9,
+    1,
+    9,
+    1,
+    2,
+    3,
+    1,
+    6,
+    2,
+    8,
+    2,
+    4,
+    5,
+    8,
+    6,
+    1,
+    7,
+    8,
+    6,
+    6,
+    4,
+    5,
+    8,
+    3,
+    5,
+    9,
+    1,
+    2,
+    4,
+    5,
+    6,
+    6,
+    5,
+    2,
+    9,
+    4,
+    7,
+    6,
+    5,
+    4,
+    5,
+    6,
+    8,
+    2,
+    8,
+    4,
+    8,
+    9,
+    1,
+    2,
+    8,
+    8,
+    3,
+    1,
+    4,
+    2,
+    6,
+    0,
+    7,
+    6,
+    9,
+    0,
+    0,
+    4,
+    2,
+    2,
+    4,
+    2,
+    1,
+    9,
+    0,
+    2,
+    2,
+    6,
+    7,
+    1,
+    0,
+    5,
+    5,
+    6,
+    2,
+    6,
+    3,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    9,
+    3,
+    7,
+    0,
+    5,
+    4,
+    4,
+    2,
+    1,
+    7,
+    5,
+    0,
+    6,
+    9,
+    4,
+    1,
+    6,
+    5,
+    8,
+    9,
+    6,
+    0,
+    4,
+    0,
+    8,
+    0,
+    7,
+    1,
+    9,
+    8,
+    4,
+    0,
+    3,
+    8,
+    5,
+    0,
+    9,
+    6,
+    2,
+    4,
+    5,
+    5,
+    4,
+    4,
+    4,
+    3,
+    6,
+    2,
+    9,
+    8,
+    1,
+    2,
+    3,
+    0,
+    9,
+    8,
+    7,
+    8,
+    7,
+    9,
+    9,
+    2,
+    7,
+    2,
+    4,
+    4,
+    2,
+    8,
+    4,
+    9,
+    0,
+    9,
+    1,
+    8,
+    8,
+    8,
+    4,
+    5,
+    8,
+    0,
+    1,
+    5,
+    6,
+    1,
+    6,
+    6,
+    0,
+    9,
+    7,
+    9,
+    1,
+    9,
+    1,
+    3,
+    3,
+    8,
+    7,
+    5,
+    4,
+    9,
+    9,
+    2,
+    0,
+    0,
+    5,
+    2,
+    4,
+    0,
+    6,
+    3,
+    6,
+    8,
+    9,
+    9,
+    1,
+    2,
+    5,
+    6,
+    0,
+    7,
+    1,
+    7,
+    6,
+    0,
+    6,
+    0,
+    5,
+    8,
+    8,
+    6,
+    1,
+    1,
+    6,
+    4,
+    6,
+    7,
+    1,
+    0,
+    9,
+    4,
+    0,
+    5,
+    0,
+    7,
+    7,
+    5,
+    4,
+    1,
+    0,
+    0,
+    2,
+    2,
+    5,
+    6,
+    9,
+    8,
+    3,
+    1,
+    5,
+    5,
+    2,
+    0,
+    0,
+    0,
+    5,
+    5,
+    9,
+    3,
+    5,
+    7,
+    2,
+    9,
+    7,
+    2,
+    5,
+    7,
+    1,
+    6,
+    3,
+    6,
+    2,
+    6,
+    9,
+    5,
+    6,
+    1,
+    8,
+    8,
+    2,
+    6,
+    7,
+    0,
+    4,
+    2,
+    8,
+    2,
+    5,
+    2,
+    4,
+    8,
+    3,
+    6,
+    0,
+    0,
+    8,
+    2,
+    3,
+    2,
+    5,
+    7,
+    5,
+    3,
+    0,
+    4,
+    2,
+    0,
+    7,
+    5,
+    2,
+    9,
+    6,
+    3,
+    4,
+    5,
+    0,
+  ];
+function largest (n:number) {
+    let start = 0;
+    let end = n-1;
+    let current;
+    let result = -Infinity;
 
-function printMany():void {
-    for(let i=1; i<=100; i++){
-        console.log(i);
-    }
-}
-// printMany();
-
-function printEvery3():void {
-    for(let i=1; i<=88; i+=3){
-        console.log(i);
-    }
-}
-// printEvery3();
-
-function stars(star:number):void {
-    let result = [];
-    let i = 0;
-    while(i < star){
-        result.push('*');
-        i++;
-    }
-    console.log(result.join(''));
-}
-// stars(10);
-
-function isUpperCase(str:string):void {
-    console.log(/[A-Z]/.test(str[0]));
-}
-// isUpperCase("C");
-
-function isAllUpperCase(str:string):void {
-    if(str.length === 0){
-        console.log(false);
-        return;
-    }
-    for(let item of str){
-        if(/[A-Z]/.test(item) === false){
-            console.log(false);
-            return;
+    while(end < thousandDigits.length){
+        current = 1
+        for(let i=start; i<=end; i++){
+            current *= thousandDigits[i];
         }
-    }
-    console.log(true);
-}
-// isAllUpperCase('')
-
-function position(str:string):void {
-    const arr = str.split('');
-    for(let index in arr){
-        if(/[A-Z]/.test(arr[index]) === true){
-            console.log(arr[index], index);
-            return;
+        if(current > result){
+            result = current;
         }
-    }
-    console.log(-1);
-}
-// position('abCD');
-
-function findSmallCount(arr:number[],num:number):void {
-    const result = [];
-    for(let item of arr){
-        if(item < num){
-            result.push(item);
-        }
-    }
-    console.log(result.length);
-}
-// findSmallCount([1,2,3,4,5],0);
-
-function findSmallerTotal(arr:number[],num:number):void {
-    let result = 0;
-    let times = 0;
-   
-    for(let item of arr){
-        if((result + item) <= num){
-            result += item;
-            times++;
-        }
-    }
-
-    if(times <= 1 || times === 0){
-        console.log(0);
-        return;
-    }
-    console.log(result);
-}
-// findSmallerTotal([3, 2, 5, 8, 7], 0);
-
-function findAllSmall(arr:number[],num:number):void {
-    let result = [];
-    for(let item of arr){
-        if(item < num){
-            result.push(item);
-        }
-    }
-    console.log(result);
-}
-// findAllSmall([1, 3, 5, 4, 2], 4);
-
-function sum (arr:number[]):void {
-    let result = 0;
-    for(let item of arr){
-        result += item;
-    }
-    console.log(result);
-}
-// sum([-10, -20, -30]);
-
-function addStars(num:number):void {
-    let str = ['*']
-
-    for(let i = 1; i<= num; i++){
-        let result = str.join('');
-        console.log(result);
-        str.push('*');
+        console.log(start,end);
+        start++;
+        end++;
     }
 }
-// addStars(1);
 
-
-function makeStars(num:number):void {
-    // 從 1 開始
-    let str = ['*']
-
-    for(let i = 1; i<= num; i++){
-        // 紀錄下一輪應該要有幾個 *，例如目前是 1，下一輪應該出現 2 個 *
-        let a = i + 1;
-
-        // 先直接輸出目前結果，目前只有 *
-        console.log(str.join(''));
-        // 先加入 \n
-        str.push("\\n");
-
-        // 加入下一輪要的 *，下一輪是兩顆所以是 **
-        while(a !== 0){
-            str.push("*");
-            a--;
-        }
-    }
-}
-// makeStars(5);
-
-function stars2(num:number):void {
-    if(num < 1){
-        return;
-    }
-
-    new Promise<void>((resolve, reject) => {
-        let result = "*";
-        for(let i = 1; i <= num; i++){
-            console.log(result);
-            result += "*";
-        }
-        resolve();
-    }).then(result=>{
-        let array = [];
-        let n = num - 1;
-        while(n !== 0){
-            array.push('*')
-            n--;
-        }
-        
-        for(let n = num-1; n!==0;n--){
-            console.log(array.join(''));
-            array.length--;
-        }
-    })
-}
-// stars2(10);
-
-function table(num:number):void {
-    for(let i = 1;i<10; i++){
-    }
-}
-// table(3);
-
-function table9to9():void {
-    for(let i = 1;i<10; i++){
-        for(let n = 1; n<10; n++){
-            console.log(String(i) + " x " + String(n) +  " = " + String(i*n));
-        }
-    }
-}
-// table9to9();
-
-// 要求印出指定 index 的費波那契數
-function fib(index:number):void {
-
-    // 如果 index 為 0，印出 0 並跳出函式
-    if(index === 0){
-        console.log(0);
-        return;
-    }
-    // 視為已執行過一次，因此從 1 開始計數
-    let times = 1;
-
-    // 兩數相加的前項
-    let first = 1;
-    // 輸出解答，也是兩數相加的後項
-    let result = 1;
-    
-    // 迴圈從第一項開始跑，跑指定 index-1 的次數（扣掉 0 項）
-    while(times < index - 1){
-
-        // 前項 + 後項（也是新後項的值）
-        result = first + result;
-        // 新前項為解答 - 原前項（也是原後項的值）
-        first = result - first;
-
-        // 例如：2、3、5
-        // 前項為 2、後項 3，相加後為 5 也就是新的後項
-        // 5 - 原前項 2 為 3，也就是新前項
-
-        // 跑過一次迴圈 ++
-        times++;
-    }
-    console.log(result)
-}
-// fib(0);
-
-// 大小寫互換
-function swap(str:string):void {
-    let array = [];
-    const pattern_b = /[A-Z]]?/;
-    const pattern_s = /[a-z]?/
-    for(let i=0; i <= str.length - 1; i++){
-        
-       if(){
-           
-       }
-    }
-}
-swap("aLOHA");
+largest(4);
 
 export {}
+
+
+/*
+let start = 0
+let end = 1
+let current = thousandDigits[start]
+let result = Infinity
+
+while end < thousandDigits.length
+
+if end - start < n
+current *= thousandDigits[end]
+end++;
+
+if end - start = n
+    if result < current
+        result = current
+    current /= current/thousandDigits[start]
+    start++;
+
+
+
+*/
+
